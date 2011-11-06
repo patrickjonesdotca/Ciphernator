@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, CiphernatorActivity!</string>
+    <string name="app_name">Ciphernator</string>
+    <string name="encode">Encode</string>
+    <string name="translate">Translate</string>
+    <string name="decode">Decode</string>
+</resources>

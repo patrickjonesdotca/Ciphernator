@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+    <RelativeLayout android:id="@+id/relativeLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="1.07">
+        <EditText android:layout_height="150dp" android:layout_width="fill_parent" android:inputType="textMultiLine" android:id="@+id/EditText01" android:layout_above="@+id/radioButton1" android:layout_alignParentLeft="true" android:layout_marginBottom="26dp">
+            <requestFocus></requestFocus>
+        </EditText>
+        <EditText android:layout_height="150dp" android:layout_width="fill_parent" android:inputType="textMultiLine" android:id="@+id/editText1" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:layout_marginBottom="80dp"></EditText>
+        <Button android:id="@+id/button1" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_marginBottom="17dp" android:layout_width="fill_parent" android:layout_alignRight="@+id/radioButton2" android:layout_alignLeft="@+id/radioButton1" android:text="@string/translate"></Button>
+        <CheckBox android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/checkBox1" android:layout_above="@+id/editText1" android:layout_alignParentLeft="true" android:layout_marginLeft="39dp" android:layout_marginBottom="28dp" android:text="@string/decode"></CheckBox>
+        <CheckBox android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/checkBox2" android:layout_alignTop="@+id/checkBox1" android:layout_toRightOf="@+id/checkBox1" android:layout_marginLeft="50dp" android:text="@string/encode"></CheckBox>
+    </RelativeLayout>
+
+</LinearLayout>
