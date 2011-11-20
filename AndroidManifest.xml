@@ -13,6 +13,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="Ciphernator"></activity>
+        <activity android:name="Form"></activity>
 
     </application>
 </manifest>

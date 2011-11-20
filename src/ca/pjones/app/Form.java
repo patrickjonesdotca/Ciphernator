@@ -3,7 +3,7 @@ package ca.pjones.app;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
-import android.content.Intent;
+import ca.pjones.ciphernator.*;
 
 public class Form extends Activity {
 	Bundle bundle;
@@ -16,6 +16,15 @@ public class Form extends Activity {
         bundle = getIntent().getExtras();
         cipherType = bundle.getString("cipherType");
         toastMe("CipherType is " + cipherType);
+    }
+    
+    private int findCipherClass(String bundledName) {
+    	return CipherTypes.valueOf(bundledName).ordinal();
+    }
+    
+    private void buildCipherObject(int type)
+    {
+    	
     }
     
     private void toastMe(String message)

@@ -1,12 +1,9 @@
 package ca.pjones.ciphernator;
 
-public abstract class Ciphernator {
+public class Ciphernator implements Cipherable {
   
   public String inputString;
   public String outputString;
-  
-  abstract public void encryptString();
-  abstract public void decryptString();
   
   public void setInputString(String string)
   {
@@ -31,5 +28,12 @@ public abstract class Ciphernator {
   public char asciiToChar(int i)
   {
     return (char)i;
+  }
+  public void encryptString()
+  { 
+  }
+  
+  public void decryptString()
+  {
   }
 }

@@ -4,18 +4,12 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.content.Intent;
 import java.util.ArrayList;
 
-enum CipherTypes {
-	Reverser, CaeserShifter;
-	public static CipherTypes find(int index) {
-		return values()[index];
-	}
-};
+import ca.pjones.ciphernator.CipherTypes;
 
 public class Ciphernator extends ListActivity {
 	String[] menulist;
