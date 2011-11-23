@@ -9,13 +9,18 @@ public enum CipherTypes {
 	 }
 	 
 	 public Ciphernator build() {
+	   Ciphernator cr = null;
 	   switch(this) {
 	     case Reverser:
-	       return new Reverser();
+	       cr =  new Reverser();
+	       break;
+	     case CaeserShifter:
+	       cr =  new CaeserShifter();
+	       break;
 	   }
-	   return new Ciphernator();
+	   return cr;
 	 }
 	 
-	}
+}
 
 

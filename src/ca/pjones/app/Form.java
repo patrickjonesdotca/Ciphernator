@@ -8,6 +8,7 @@ import ca.pjones.ciphernator.*;
 public class Form extends Activity {
 	Bundle bundle;
 	String cipherType;
+	Object cr;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -16,16 +17,9 @@ public class Form extends Activity {
         bundle = getIntent().getExtras();
         cipherType = bundle.getString("cipherType");
         toastMe("CipherType is " + cipherType);
+        cr = CipherTypes.valueOf(cipherType).build();
     }
-    
-    private int findCipherClass(String bundledName) {
-    	return CipherTypes.valueOf(bundledName).ordinal();
-    }
-    
-    private void buildCipherObject(int type)
-    {
-    	
-    }
+
     
     private void toastMe(String message)
     {
