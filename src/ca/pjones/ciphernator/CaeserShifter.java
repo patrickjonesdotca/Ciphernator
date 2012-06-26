@@ -16,7 +16,7 @@ class CaeserShifter extends Ciphernator
   
   public CaeserShifter()
   {
-    int SHIFT_VALUE = 3;
+    SHIFT_VALUE = 3;
   }
   
   public void encryptString()
