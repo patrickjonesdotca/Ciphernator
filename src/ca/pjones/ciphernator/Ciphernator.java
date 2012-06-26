@@ -15,7 +15,7 @@ public class Ciphernator implements Cipherable {
     return inputString;
   }
   
-  public String getEncryptedString()
+  public String getOutputString()
   {
     return outputString;
   }
@@ -29,6 +29,7 @@ public class Ciphernator implements Cipherable {
   {
     return (char)i;
   }
+  
   public void encryptString()
   { 
   }

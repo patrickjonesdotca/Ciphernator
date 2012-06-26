@@ -4,15 +4,54 @@
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent" android:weightSum="1">
-    <TextView android:layout_height="wrap_content" android:text="TextView" android:id="@+id/textView1" android:layout_width="fill_parent" android:layout_gravity="center_horizontal" android:gravity="clip_horizontal"></TextView>
-    <EditText android:layout_height="wrap_content" android:id="@+id/editText1" android:layout_width="fill_parent" android:inputType="textMultiLine" android:layout_weight="0.27">
+    <TextView android:layout_height="wrap_content" 
+        android:text="Enter Text to En|DeCrypt" 
+        android:id="@+id/textView1" 
+        android:layout_width="fill_parent" 
+        android:layout_gravity="center_horizontal" 
+        android:gravity="clip_horizontal"></TextView>
+    <EditText android:layout_height="wrap_content" 
+        android:id="@+id/editText1" 
+        android:layout_width="fill_parent" 
+        android:inputType="textMultiLine" 
+        android:layout_weight="0.27">
         <requestFocus></requestFocus>
     </EditText>
-    <RelativeLayout android:id="@+id/relativeLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="0.13">
-        <RadioButton android:layout_width="wrap_content" android:text="RadioButton" android:id="@+id/radioButton1" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentLeft="true" android:layout_marginLeft="14dp"></RadioButton>
-        <RadioButton android:layout_width="wrap_content" android:text="RadioButton" android:id="@+id/radioButton2" android:layout_height="wrap_content" android:layout_alignTop="@+id/radioButton1" android:layout_alignParentRight="true" android:layout_marginRight="24dp"></RadioButton>
-    </RelativeLayout>
-    <TextView android:layout_height="wrap_content" android:text="TextView" android:id="@+id/textView2" android:layout_width="fill_parent" android:layout_weight="0.34"></TextView>
-    <Button android:layout_height="wrap_content" android:id="@+id/button1" android:text="Button" android:layout_width="fill_parent"></Button>
+        <RadioGroup
+	      android:layout_width="match_parent"
+    	  android:layout_height="wrap_content"
+      	  android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:checked="false"
+                android:onClick="decryptButtonClicked"
+                android:text="Decrypt" />
+
+	        <RadioButton
+	            android:id="@+id/radioButton1"
+	            android:layout_width="110dp"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="0dp"
+	            android:checked="false"
+	            android:onClick="encryptButtonClicked"
+	            android:text="Encrypt" ></RadioButton>
+	        </RadioGroup>
+    <TextView android:layout_height="wrap_content" 
+        android:text="output..." 
+        android:id="@+id/textView2" 
+        android:layout_width="fill_parent" 
+        android:layout_weight="0.34"></TextView>
+    <Button android:layout_height="wrap_content" 
+        android:id="@+id/button1" 
+        android:text="Ciphernate" 
+        android:layout_width="fill_parent"
+        android:onClick="buttonClicked"
+        ></Button>
     
 </LinearLayout>

@@ -2,7 +2,7 @@ package ca.pjones.ciphernator;
 
 enum Direction {UP, DOWN};
 
-class CaeserShifter extends Ciphernator
+public class CaeserShifter extends Ciphernator
 {
   private int SHIFT_VALUE;
   static final int SET_START = 48;
@@ -16,7 +16,7 @@ class CaeserShifter extends Ciphernator
   
   public CaeserShifter()
   {
-    int SHIFT_VALUE = 3;
+    SHIFT_VALUE = 3;
   }
   
   public void encryptString()
@@ -38,14 +38,16 @@ class CaeserShifter extends Ciphernator
       int c = charToAscii(inputString.charAt(i));
       int crypted = shift(c, Direction.DOWN);
       char asciified = asciiToChar(crypted);
-      sb.append(asciified);}
+      sb.append(asciified);
+     }
     outputString = sb.toString();
   }
   
-  private int shift(int value, Direction shift)
+  private int shift(int value, Direction direction)
   {
     int ret = 0;
-    switch(shift)
+    System.out.println("shift value is " + this.SHIFT_VALUE);
+    switch(direction)
     {
       case UP: 
         ret =  value + SHIFT_VALUE;

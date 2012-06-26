@@ -32,7 +32,7 @@ public class Ciphernator extends ListActivity {
 	protected void onListItemClick(ListView listview, View view, int location, long id) {
     	_menuItem = (int)id;
     	_toastString = CipherTypes.find(_menuItem).toString();
-    	toastMe(_toastString + " Chosen");
+    	//toastMe(_toastString + " Chosen");
     	bundle.putString("cipherType", _toastString);
     	Intent form = new Intent(Ciphernator.this, Form.class);
     	form.putExtras(bundle);

@@ -1,6 +1,6 @@
 package ca.pjones.ciphernator;
 
-class Reverser extends Ciphernator
+public class Reverser extends Ciphernator
 {
   public void encryptString()
   {
